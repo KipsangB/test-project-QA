@@ -1,0 +1,98 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - link [ref=e4] [cursor=pointer]:
+        - /url: https://demoqa.com
+        - img [ref=e5]
+    - generic [ref=e8]:
+      - generic [ref=e11]:
+        - generic [ref=e14] [cursor=pointer]:
+          - generic [ref=e15]:
+            - img [ref=e17]
+            - text: Elements
+          - img [ref=e22]
+        - generic [ref=e26] [cursor=pointer]:
+          - generic [ref=e27]:
+            - img [ref=e29]
+            - text: Forms
+          - img [ref=e35]
+        - generic [ref=e39] [cursor=pointer]:
+          - generic [ref=e40]:
+            - img [ref=e42]
+            - text: Alerts, Frame & Windows
+          - img [ref=e47]
+        - generic [ref=e51] [cursor=pointer]:
+          - generic [ref=e52]:
+            - img [ref=e54]
+            - text: Widgets
+          - img [ref=e60]
+        - generic [ref=e64] [cursor=pointer]:
+          - generic [ref=e65]:
+            - img [ref=e67]
+            - text: Interactions
+          - img [ref=e72]
+        - generic [ref=e74]:
+          - generic [ref=e76] [cursor=pointer]:
+            - generic [ref=e77]:
+              - img [ref=e79]
+              - text: Book Store Application
+            - img [ref=e84]
+          - list [ref=e87]:
+            - listitem [ref=e88] [cursor=pointer]:
+              - link "Login" [ref=e89]:
+                - /url: /login
+                - img [ref=e90]
+                - text: Login
+            - listitem [ref=e92] [cursor=pointer]:
+              - link "Book Store" [ref=e93]:
+                - /url: /books
+                - img [ref=e94]
+                - text: Book Store
+            - listitem [ref=e96] [cursor=pointer]:
+              - link "Profile" [ref=e97]:
+                - /url: /profile
+                - img [ref=e98]
+                - text: Profile
+            - listitem [ref=e100] [cursor=pointer]:
+              - link "Book Store API" [ref=e101]:
+                - /url: /swagger
+                - img [ref=e102]
+                - text: Book Store API
+      - generic [ref=e105]:
+        - heading "Register" [level=1] [ref=e106]
+        - generic [ref=e107]:
+          - heading "Register to Book Store" [level=4] [ref=e109]
+          - generic [ref=e110]:
+            - generic [ref=e112]: "First Name :"
+            - textbox "First Name" [ref=e114]
+          - generic [ref=e115]:
+            - generic [ref=e117]: "Last Name :"
+            - textbox "Last Name" [ref=e119]
+          - generic [ref=e120]:
+            - generic [ref=e122]: "UserName :"
+            - textbox "UserName" [ref=e124]
+          - generic [ref=e125]:
+            - generic [ref=e127]: "Password :"
+            - textbox "Password" [ref=e129]
+          - generic [ref=e130]:
+            - button "Register" [ref=e132] [cursor=pointer]
+            - button "Back to Login" [ref=e134] [cursor=pointer]
+    - contentinfo [ref=e141]:
+      - generic [ref=e142]: © 2013-2026 TOOLSQA.COM | ALL RIGHTS RESERVED.
+  - iframe [ref=e145]:
+    - generic [ref=f3e2]:
+      - generic [ref=f3e5]:
+        - link "Privacy" [ref=f3e6] [cursor=pointer]:
+          - /url: https://www.google.com/intl/en/policies/privacy/
+        - text: "-"
+        - link "Terms" [ref=f3e7] [cursor=pointer]:
+          - /url: https://www.google.com/intl/en/policies/terms/
+      - generic [ref=f3e8]:
+        - generic [ref=f3e9]:
+          - text: protected by
+          - strong [ref=f3e10]: reCAPTCHA
+        - generic [ref=f3e11]: "-"
+```
