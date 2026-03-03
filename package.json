@@ -1,0 +1,33 @@
+{
+  "name": "ui_test",
+  "version": "1.0.0",
+  "description": "Quick start for testing on Playwright",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KipsangB/test-project-QA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KipsangB/test-project-QA/issues"
+  },
+  "homepage": "https://github.com/KipsangB/test-project-QA#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.52.0",
+    "@prisma/client": "^6.19.2",
+    "prisma": "^6.19.2"
+  }
+}
