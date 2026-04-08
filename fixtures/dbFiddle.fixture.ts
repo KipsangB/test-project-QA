@@ -17,14 +17,12 @@ export const test = base.extend<DbFiddleFixtures>({
 
     const dbFiddle = {
       schemaEditor: async (sql: string) => {
-        await schemaEditor.evaluate((editorDiv, sql) => {
-          // @ts-ignore
+        await schemaEditor.evaluate((editorDiv: any, sql) => {
           editorDiv.CodeMirror.setValue(sql);
         }, sql);
       },
       queryEditor: async (sql: string) => {
-        await queryEditor.evaluate((editorDiv, sql) => {
-          // @ts-ignore
+        await queryEditor.evaluate((editorDiv: any, sql) => {
           editorDiv.CodeMirror.setValue(sql);
         }, sql);
       },
