@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { TITUS_BETT } from '../Data/tableData.js';
 
 test('DB Fiddle - Schema + Query Test (Fixed)', async ({ page }) => {
   await page.goto('https://www.db-fiddle.com/');

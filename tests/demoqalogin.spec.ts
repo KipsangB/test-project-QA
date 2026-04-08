@@ -1,5 +1,7 @@
 
 import { test, expect } from '@playwright/test';
+import { TITUS_BETT } from '../Data/tableData.js';
+
 
 test.describe('Authentication Flow', () => {
    
