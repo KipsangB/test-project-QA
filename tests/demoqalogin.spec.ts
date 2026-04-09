@@ -1,12 +1,9 @@
-
 import { test, expect } from '@playwright/test';
 import { TITUS_BETT } from '../Data/tableData.js';
-
 
 test.describe('Authentication Flow', () => {
    
     test.beforeEach(async ({ page }) => {
-        // using the'domcontentloaded' makes execution faster than 'load' because it doesn't wait for images/ads
         await page.goto('https://demoqa.com/login', {
             waitUntil: 'domcontentloaded',
             timeout: 30000
@@ -24,11 +21,10 @@ test.describe('Authentication Flow', () => {
     });
 
 
-    //Task/question1:Create a user and log in.
+    //Task1/question1:Create a user and log in.
 
 
     test('should navigate to registration and back to login', async ({ page }) => {
-        // Wait for the button specifically rather than the whole page load
         const newUserBtn = page.locator('#newUser');
         await newUserBtn.waitFor({ state: 'visible' });
         await newUserBtn.click({ force: true });
@@ -39,8 +35,7 @@ test.describe('Authentication Flow', () => {
         await page.fill('#firstname', 'Titus');
         await page.fill('#lastname', 'Bett');
         await page.fill('#userName', 'TitusBett');
-        await page.fill('#password', 'Titus@123');
-
+        await page.fill('#password', 'TitusBett_QA2026');
         await page.goto('https://demoqa.com/login', { waitUntil: 'domcontentloaded' });
 
 
@@ -48,8 +43,6 @@ test.describe('Authentication Flow', () => {
         await page.fill('#password', 'Titus@123');
         await page.click('#login', { force: true });
 
-
-        // If login stays on page, the username field remains visible
         await expect(page.locator('#userName')).toBeVisible();
     });
 
@@ -88,4 +81,3 @@ test.describe('Authentication Flow', () => {
         expect(bgColor).not.toBe('');
     });
 });
-

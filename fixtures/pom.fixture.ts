@@ -1,19 +1,19 @@
-import { test as base, expect } from './dbFiddle.fixture.js';
-import { WebTablePage } from '../pages/webpageTable.js';
+import { test as base } from '@playwright/test';
 import { LoginPage } from '../pages/demoqaloginpage.js';
+import { WebTablePage } from '../pages/webpagetable.js'; 
 
-interface MyFixtures {
-  webTablePage: WebTablePage;
-  loginPage: LoginPage;
-}
+type MyFixtures = {
+    loginPage: LoginPage;
+    tablePage: WebTablePage;
+};
 
 export const test = base.extend<MyFixtures>({
-  webTablePage: async ({ page }, use) => {
-    await use(new WebTablePage(page));
-  },
-  loginPage: async ({ page }, use) => {
-    await use(new LoginPage(page));
-  },
+    loginPage: async ({ page }, use) => {
+        await use(new LoginPage(page));
+    },
+    tablePage: async ({ page }, use) => {
+        await use(new WebTablePage(page));
+    },
 });
 
-export { expect };
+export { expect } from '@playwright/test';
