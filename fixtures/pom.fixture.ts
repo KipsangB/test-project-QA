@@ -1,6 +1,6 @@
 import { test as base } from '@playwright/test';
 import { LoginPage } from '../pages/demoqaloginpage.js';
-import { WebTablePage } from '../pages/webpagetable.js'; 
+import { WebTablePage } from '../pages/table.js'; 
 
 type MyFixtures = {
     loginPage: LoginPage;
