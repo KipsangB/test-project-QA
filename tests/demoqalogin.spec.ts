@@ -27,7 +27,7 @@ test.describe('Authentication Flow @auth', () => {
         await newUserBtn.waitFor({ state: 'visible' });
         await newUserBtn.click({ force: true });
         
-        await expect(page).toHaveURL(/register/);
+        await page.waitForURL('**/register', { timeout: 10000 });
 
         await page.fill('#firstname', TITUS_BETT.firstName);
         await page.fill('#lastname', TITUS_BETT.lastName);
