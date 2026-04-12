@@ -24,17 +24,19 @@ test.describe('Authentication Flow @auth', () => {
 
     test('should navigate to registration and back to login @smoke @regression', async ({ page }) => {
         const newUserBtn = page.locator('#newUser');
-        await newUserBtn.waitFor({ state: 'visible' });
-        await newUserBtn.click({ force: true });
-        
-        await page.waitForURL('**/register', { timeout: 10000 });
 
+        await newUserBtn.waitFor({ state: 'visible' });
+        await newUserBtn.scrollIntoViewIfNeeded();
+        await Promise.all([
+    page.waitForURL('**/register', { timeout: 15000, waitUntil: 'load' }),
+    newUserBtn.click()
+]);
         await page.fill('#firstname', TITUS_BETT.firstName);
         await page.fill('#lastname', TITUS_BETT.lastName);
         await page.fill('#userName', TITUS_BETT.username);
         await page.fill('#password', TITUS_BETT.password);
 
-        await page.goto('https://demoqa.com/login', { waitUntil: 'networkidle' });
+        await page.goto('https://demoqa.com/login', { waitUntil: 'load' });
 
         await page.fill('#userName', TITUS_BETT.username);
         await page.fill('#password', TITUS_BETT.password);
