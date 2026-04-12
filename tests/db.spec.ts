@@ -1,6 +1,6 @@
 import { test, expect } from '../fixtures/dbFiddle.fixture.js';
 
-test('DB Fiddle - Advanced Query Test (Refactored with Fixtures)', async ({ dbFiddle, page }) => {
+test('DB Fiddle - Advanced Query Test @sql @integration @backend', async ({ dbFiddle, page }) => {
   
   const schemaSQL = `
     CREATE TABLE Clients (client_id INT PRIMARY KEY, client_name VARCHAR(100), address VARCHAR(255), phone VARCHAR(20));
